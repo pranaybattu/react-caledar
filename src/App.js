@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+
+import Calendar from './components/Calendar';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+      return(
+        <div className='App'>
+          <header>
+            <div id="logo">
+              {/* <span className="icon">data_range</span> */}
+              <span>
+                react<span style={{fontWeight:'500'}}>calendar</span>
+              </span>
+            </div>
+          </header>
+          <main>
+            <Calendar />
+          </main>
+
+        </div>
+      ) 
+  }
 }
 
 export default App;
